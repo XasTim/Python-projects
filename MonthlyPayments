@@ -1,0 +1,25 @@
+#This code is written to calculate your total income and divide what is left even on 2 partners
+his_income = float (input ("What is his income? " ) )
+her_income= float (input ("What is her income? " ))
+
+total_income = his_income + her_income
+print ("Total income is" , total_income)
+bank_payment = float (input("How much for the bank? "))
+provision = float (input("How much provision? "))
+loan = float (input("How much loan? "))
+electricity = float (input("How much electricity? "))
+internet = float (input("How much internet? "))
+water = float (input("How much for the water? "))
+total_payments = bank_payment + provision + loan + electricity + internet + water
+
+leftover = total_income - total_payments
+#What is left to spend
+print ("There is", leftover ,"euro left to spend")
+#divide that in half
+half_leftover = leftover / 2
+
+her_pay = her_income - half_leftover
+his_pay = his_income - half_leftover
+
+print ("she has to pay", her_pay)
+print ("he has to pay", his_pay)
